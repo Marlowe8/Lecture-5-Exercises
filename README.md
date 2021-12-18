@@ -1,12 +1,41 @@
 # Lecture-5-Exercises
+**//Biography**
+                #include <iostream>
+                #include <string>
+                using namespace std;
 
-#include <iostream>
-#include <ctype.h>
-#include <string>
-using namespace std;
 
 
-//Temperature conversion
+                int main() {
+                    string address;
+                    string user;
+                    int age;
+                    cout << "Enter your name: ";
+                    getline(cin, user);
+                    cout << "\nEnter your address: ";
+                    getline(cin, address);
+                    cout << "\nEnter your age: "; cin >> age;
+                    while (cin.fail()) {
+                        cout << "Invalid input. Try again" << endl;
+                        cin.clear();
+                        cin.ignore();
+                        cin >>age;
+                    }
+                    system("cls");
+                    cout << "Your name is: " << user;
+                    cout << "\n\nYour age is: " << age;
+                    cout << "\n\nYour address is: " << address;
+                        return 0;
+                }
+
+**//Temperature Conversion**
+                #include <iostream>
+                #include <ctype.h>
+                #include <string>
+                using namespace std;
+
+
+
         int main() {
 
           char type = 0;
