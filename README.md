@@ -91,22 +91,57 @@
   
   
 **  //Circles**
-                          #include <iostream>
-                          #include <string>
-                          using namespace std;
-                          int main()
-                          {
-                              double radius, area, circumference;
-                              cout << "Enter the radius to calculate the area and circumference of the circle: "; cin >> radius;
+           #include <iostream>
+      #include <string>
+      using namespace std;
+      int main()
+      {
+          double radius, area, circumference;
+          cout << "Enter the radius to calculate the area and circumference of the circle: "; cin >> radius;
+      while (cin.fail()) {
+          cout << "Invalid input. Try again" << endl;
+          cin.clear();
+          cin.ignore();
+          cin >> radius;
+      }
+          area = 3.14 * radius * radius;
+          circumference = 2 * 3.14 * radius;
+          cout << "The area of the circle is: " << area << endl;
+          cout << "The circumference  of the circle is: " << circumference << endl;
+      }
+  
+ ** //Rectangle, Triangle, and Square**
+                        #include <iostream>
+                      #include <string>
+                      using namespace std;
+
+                      int main()
+                      {
+                          double len, wid, rect, tri, squ;
+                          cout << "Enter the length and width to calculate the area of Rectangle, Triangle and Square" << endl;
+                          cout << "Enter lenght: "; cin >> len;
                           while (cin.fail()) {
                               cout << "Invalid input. Try again" << endl;
                               cin.clear();
                               cin.ignore();
-                              cin >> radius;
+                              cin >> len;
                           }
-                              area = 3.14 * radius * radius;
-                              circumference = 2 * 3.14 * radius;
-                              cout << "The area of the circle is: " << area << endl;
-                              cout << "The circumference  of the circle is: " << circumference << endl;
+                          cout << "Enter width: "; cin >> wid;
+                          while (cin.fail()) {
+                              cout << "Invalid input. Try again" << endl;
+                              cin.clear();
+                              cin.ignore();
+                              cin >> wid;
                           }
+                          rect = len * wid;
+                          tri = (len * wid) * 0.5;
+                          squ = len * len;
 
+                          cout << "The area of rectangle: " << rect << endl;
+                          cout << "The area of triangle: " << tri << endl;
+                          cout << "The area of  square: " << squ << endl;
+                          return 0;
+                      }
+
+
+           
